@@ -1,0 +1,35 @@
+.post-list {
+  display: flex;
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.post-item {
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #292929;
+  display: flex;
+  flex-direction: column;
+
+  h5 {
+    font-size: 1.5rem;
+    color: rgb(204, 204, 79);
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: white;
+  }
+
+  &:hover {
+    background-color: rgb(204, 204, 79);
+    h5,
+    a {
+      color: black;
+    }
+  }
+}

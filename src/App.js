@@ -6,24 +6,41 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import "./App.css";
 import MainNavigation from "./shared/components/navigation/main-navigation/MainNavigation";
 import Posts from "./posts/views/posts/Posts";
 import Users from "./users/views/users/Users";
+import PostDetails from "./posts/components/post-details/PostDetails.js";
+import UserDetails from "./users/components/user-details/UserDetails";
+
+import "./App.scss";
 
 function App() {
   return (
     <Router>
-      <MainNavigation />
-      <Switch>
-        <Route path="/" exact>
-          <Posts />
-        </Route>
+      <header>
+        <MainNavigation />
+      </header>
+      <main>
+        <Switch>
+          <Route path="/" exact>
+            <Posts />
+          </Route>
 
-        <Route to="/user/:userId">
-          <Users />
-        </Route>
-      </Switch>
+          <Route path="/post/:postId" exact>
+            <PostDetails />
+          </Route>
+
+          <Route path="/users" exact>
+            <Users />
+          </Route>
+
+          <Route path="/user/:userId" exact>
+            <UserDetails />
+          </Route>
+
+          <Redirect to="/" />
+        </Switch>
+      </main>
     </Router>
   );
 }

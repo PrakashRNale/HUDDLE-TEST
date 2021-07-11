@@ -1,0 +1,14 @@
+h2 {
+  text-align: center;
+}
+.user-email {
+  text-align: end;
+}
+.post-comments {
+  margin-top: 1rem;
+  height: 150px;
+  overflow: auto;
+  li {
+    margin: 1rem 0;
+  }
+}

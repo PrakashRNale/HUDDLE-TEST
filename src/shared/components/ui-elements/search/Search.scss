@@ -1,0 +1,23 @@
+.auto-complete-search {
+  position: absolute;
+  width: 80%;
+  max-width: 20rem;
+}
+
+.filtered-users {
+  background: white;
+  width: 90%;
+  max-width: 20rem;
+
+  li {
+    height: 25px;
+    cursor: pointer;
+    &:nth-child(odd) {
+      background-color: lightblue;
+    }
+
+    &:nth-child(even) {
+      background-color: rgb(97, 189, 201);
+    }
+  }
+}
